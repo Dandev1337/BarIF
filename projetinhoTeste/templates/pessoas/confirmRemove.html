@@ -1,0 +1,9 @@
+{% extends 'pessoas/_base.html' %} {% load static %} {% block content %} id: {{pessoa.id}}
+
+<hr />
+tem certeza que deseja excluir {{pessoa.nome}}?
+<hr />
+
+<a href="/pessoa/remove/final/{{pessoa.id}}/">Sim</a>
+<a href="/pessoa/">Nao</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'pessoas/_base.html' %}  
+{% block content %}
+<form action="pessoas/index">
+    {% csrf_token %}
+    {{form}}
+
+    <input type="submit" value = "Cadastrar">
+
+</form>
+{% endblock %}

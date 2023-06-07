@@ -1,0 +1,6 @@
+{% extends 'pessoas/_base.html' %} {% load static %} {% block content %}
+<form action="/pessoa/edit/{{id}}/" method="post">
+  {% csrf_token %} {{form}}
+  <button type="submit" class="btn btn-primary">Editar</button>
+</form>
+{% endblock %}

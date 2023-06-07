@@ -1,0 +1,32 @@
+{% extends 'pessoas/_base.html' %} {% load static %} {% block content %}
+
+<div>
+  <div class="d-flex justify-content-end">
+    <a class="mb-3 d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" href="add">Add pessoa</a>
+  </div>
+
+  <table class="table table-bordered dataTable" border="1">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td colspan="2">Ações</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for pessoa in dsPessoas %}
+      <tr>
+        <td>{{pessoa.id}}</td>
+        <td>{{pessoa.nome}}</td>
+        <td>{{pessoa.idade}}</td>
+        <td>
+          <a href="/pessoa/edit/{{pessoa.id}}">Editar</a>
+          <a href="/pessoa/remove/{{pessoa.id}}">Excluir</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

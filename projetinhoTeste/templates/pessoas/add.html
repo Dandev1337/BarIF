@@ -1,0 +1,11 @@
+{% extends 'pessoas/_base.html' %}
+<!-- extends nao fica aqui nesse lugar, pois o block content so pra
+adicionar oq quero em blocos, devo por em uma index e carregar a pagina toda  -->
+{% load static %} {% block content %}
+
+<form action="add" method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
+
+{% endblock %}

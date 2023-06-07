@@ -1,0 +1,6 @@
+<form action="/accounts/login/" method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="hidden" name="next" value="{{ next }}" />
+  <button type="submit" class="btn btn-primary">Login</button>
+  <a href="#" class="btn btn-primary">Cadastrar</a>
+</form>

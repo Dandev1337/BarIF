@@ -1,0 +1,11 @@
+pip install PyAudio
+python -m pip install pyaudio
+pip install SpeechRecognition
+pip install spacy
+pip install wordcloud
+pip install nltk
+python -m spacy download pt_core_news_sm
+pip install matplotlib
+pip install textblob
+pip install --upgrade Pillow
+
